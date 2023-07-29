@@ -1,6 +1,6 @@
 .main {
     min-height: 100vh;
-    padding: 3rem;
+    padding: 2rem;
 
     .heading {
         align-items: center;
@@ -9,5 +9,12 @@
         font-weight: bold;
         justify-content: center;
         margin-bottom: 20px;
+    }
+
+    .card-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+        gap: 10px;
+        justify-content: center;
     }
 }

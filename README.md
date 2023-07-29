@@ -43,17 +43,18 @@ MVP
  - NextJS Setup ✅
  - Git init ✅
  - Basic home page route with App name ✅
- - Basic display Card Styled component (Mobile first design)
- - Axios hook setup and gather info on available countries API data and format
- - Call API and store all country information in state (TODO check getServerSideProps maybe for if they load the country details page directly?)
- - Homepage, map the all countries data and display it in the card element
- - Set up routing for country details page with a country ID
- - Fetch the data if not passed in from api and display country name
- - Big flag image styled component populate with flag
- - Data box styled component, populate with data (all prev + languages)
- - mini flag link components, display all bordering countries
+ - Basic display Card Styled component (Mobile first design) ✅
+ - Axios hook setup and gather info on available countries API data and format ✅
+ - Call API and store all country information in state (TODO check getServerSideProps maybe for if they load the country details page directly?) Note: Did not server side props due to issues ✅
+ - Homepage, map the all countries data and display it in the card element ✅
+ - Set up routing for country details page with a country ID ✅
+ - Fetch the data if not passed in from api and display country name ✅
+ - Big flag image styled component populate with flag ✅
+ - Data box styled component, populate with data (all prev + languages) ✅
+ - mini flag link components, display all bordering countries ✅
  - Unit tests (jest?) ALl components
 
 Second Phase
  - Cypress setup and put in a basic end to end test
  - Put in a hot filter for the main page for the all countries view
+ - Set up i18n translations fiels

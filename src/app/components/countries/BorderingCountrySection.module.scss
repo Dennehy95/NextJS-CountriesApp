@@ -1,0 +1,22 @@
+.bordering-country-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    grid-gap: 10px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.cardContainer {
+    align-items: center;
+    background-color: #4e4e4e;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+}
