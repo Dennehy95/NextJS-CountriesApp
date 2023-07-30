@@ -2,7 +2,7 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import Button from '../button/button';
+import Button from '@/app/components/button/Button';
 
 import styles from './countryCard.module.scss';
 
