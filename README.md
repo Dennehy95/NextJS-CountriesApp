@@ -70,3 +70,4 @@ Future notes for self
  - Sort out how best to split client and server rendering when you have more time to study NextJS
  - Sort out the Unit tests properly
  - Clean up some styles and make the styling uniform. Kinda went of the rails in the rush of this, can do better
+ - Direcotry and file structure. I gorped up and capitalized inconsistently, lets fix that once not waiting for feedback

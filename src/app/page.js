@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useCountryDataContext } from '@/hooks/useCountryData';
 
 import CountryCard from '@/app/components/card/countryCard'
-import TextInput from '@/app/components/inputs/textInput';
+import TextInput from '@/app/components/inputs/TextInput';
 
 import styles from '@/styles/page.module.scss'
 
