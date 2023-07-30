@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Image from 'next/image';
 
 import Button from '../button/button';
@@ -27,36 +28,46 @@ const CountryCard = ({
     return (
         <div className={styles['card-container']}>
             <div className={styles['card-details-container']}>
-                {flagImage && (
-                    <Image
-                        alt={flagImageAltText}
-                        className={styles['top-left-image']}
-                        height={80}
-                        src={flagImage}
-                        width={120}
-                    />
-                )}
-                <dl className={styles['description']}>
-                    {mainDataToDisplay.map((data, index) => (
-                        <div
-                            key={index}
-                            className={styles['card-description-list']}
-                        >
-                            <dt>{data.label}</dt>
-                            <dd>{data.value}</dd>
-                        </div>
-                    ))}
-                    <dl className={styles[('description', 'extra')]}></dl>
-                    {extraDataToDisplay.map((data, index) => (
-                        <div
-                            key={index}
-                            className={styles['card-description-list']}
-                        >
-                            <dt>{data.label}</dt>
-                            <dd>{data.value}</dd>
-                        </div>
-                    ))}
-                </dl>
+                <div className={styles['top-details-section']}>
+                    {flagImage && (
+                        <Image
+                            alt={flagImageAltText}
+                            className={styles['top-left-image']}
+                            height={80}
+                            src={flagImage}
+                            width={120}
+                        />
+                    )}
+                    <dl className={styles['description']}>
+                        {mainDataToDisplay.map((data, index) => (
+                            <div
+                                key={index}
+                                className={styles['card-description-list']}
+                            >
+                                <dt>
+                                    <h4>{data.label}</h4>
+                                </dt>
+                                <dd>
+                                    <label>{data.value}</label>
+                                </dd>
+                            </div>
+                        ))}
+                    </dl>
+                </div>
+                <div>
+                    <dl className={styles['description']}>
+                        <dl className={styles[('description', 'extra')]}></dl>
+                        {extraDataToDisplay.map((data, index) => (
+                            <div
+                                key={index}
+                                className={styles['card-description-list']}
+                            >
+                                {data.value ? <dt>{data.label}</dt> : null}
+                                {data.value ? <dd>{data.value}</dd> : null}
+                            </div>
+                        ))}
+                    </dl>
+                </div>
             </div>
             {handleMoreDetailsClick && (
                 <div className={styles['button-container']}>

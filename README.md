@@ -37,6 +37,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 I used npx create-next-app@latest to create the app
 
+Jest Install: npm install --save-dev jest babel-jest @babel/preset-env @testing-library/react @testing-library/jest-dom
+also had to run
+npm install --save-dev jest babel-jest @babel/preset-env @babel/preset-react identity-obj-proxy
+and also apparently, plus update jest config
+npm install --save-dev jsdom
+(Was issues with needing Babel for unit tests transforming, that conflicts with SWC. Commented out the one line in app that needed SWC but I should fix that at some point )
+
 ## General project roadmap
 
 MVP
@@ -52,9 +59,14 @@ MVP
  - Big flag image styled component populate with flag ✅
  - Data box styled component, populate with data (all prev + languages) ✅
  - mini flag link components, display all bordering countries ✅
- - Unit tests (jest?) ALl components
+ - Unit tests (jest?) ALl components ⚠️ (Some done, but issues on the page tests, hitting close to 5 hours so parking)
 
 Second Phase
- - Cypress setup and put in a basic end to end test
- - Put in a hot filter for the main page for the all countries view
- - Set up i18n translations fiels
+ - Cypress setup and put in a basic end to end test ⚠️(Didn't manage to get to)
+ - Put in a hot filter for the main page for the all countries view ✅
+ - Set up i18n translations fiels ⚠️(Didn't manage to get to)
+
+Future notes for self
+ - Sort out how best to split client and server rendering when you have more time to study NextJS
+ - Sort out the Unit tests properly
+ - Clean up some styles and make the styling uniform. Kinda went of the rails in the rush of this, can do better

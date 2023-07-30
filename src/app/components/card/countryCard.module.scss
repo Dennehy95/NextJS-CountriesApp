@@ -3,11 +3,12 @@
 .card-container {
     align-items: flex-start;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    box-shadow: 0 0 0 2px #01bf71;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     margin: 10px;
+    max-width: 400px;
     padding: 10px;
 
     .card-details-container {
@@ -15,11 +16,16 @@
         display: inline-block;
         text-align: center;
         width: 100%;
+    }
 
-        @media screen and (min-width: styleConstants.$breakpointSmallDevices) {
-            display: flex;
-            gap: 15px;
-        }
+    .top-details-section {
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
     }
 
     .top-left-image {

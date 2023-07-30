@@ -1,9 +1,11 @@
 'use client'
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { useCountryDataContext } from '@/hooks/useCountryData';
 
 import CountryCard from '@/app/components/card/countryCard'
+import TextInput from '@/app/components/inputs/textInput';
 
 import styles from '@/styles/page.module.scss'
 
@@ -12,16 +14,30 @@ import styles from '@/styles/page.module.scss'
 const Home = () => {
   const router = useRouter();
   const { allCountryData, loading } = useCountryDataContext();
+  const [filterValue, setFilterValue] = useState('');
+
+  const handleFilterChange = (event) => {
+    setFilterValue(event.target.value);
+  };
+
+  // Just check name for now, could easily expand to any property
+  const filteredCountryData = filterValue ? allCountryData.filter((country) => {
+    const name = country.name?.common || country.name?.official || '';
+    return name.toLowerCase().includes(filterValue.toLowerCase());
+  }) :
+    allCountryData;
 
   return (
     <main className={styles.main}>
       <h1 className={styles.heading}>Countries App</h1>
 
+      <TextInput placeholder="Search by country name..." value={filterValue} onChange={handleFilterChange} />
+
       {loading ? (
         <p>Loading...</p>
       ) : (
         <div className={styles['card-grid-container']}>
-          {allCountryData.map((country, index) => {
+          {filteredCountryData.map((country, index) => {
             const name = country.name?.official || country.name?.common
 
             return (

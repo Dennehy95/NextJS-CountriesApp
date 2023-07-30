@@ -1,3 +1,5 @@
+@use '@/styles/styleConstants' as styleConstants;
+
 .main {
     min-height: 100vh;
     padding: 2rem;
@@ -16,5 +18,9 @@
         grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
         gap: 10px;
         justify-content: center;
+
+        @media screen and (min-width: styleConstants.$breakpointLargeDevices) {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 450px));
+        }
     }
 }
